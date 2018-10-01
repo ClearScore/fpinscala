@@ -25,7 +25,7 @@ package object iomonad {
 
   type Free[F[_], A] = IO3.Free[F, A]
 
-  def Return[A](a: A): IO[A] = IO3.Return[Par,A](a)
+  def Return[A](a: A): IO[A] = IO3.Return[Par, A](a)
 
   // To run an `IO`, we need an executor service.
   // The name we have chosen for this method, `unsafePerformIO`,
